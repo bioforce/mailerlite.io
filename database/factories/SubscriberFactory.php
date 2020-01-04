@@ -1,0 +1,15 @@
+<?php
+
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+
+use App\Subscriber;
+use Faker\Generator as Faker;
+
+$factory->define(Subscriber::class, function (Faker $faker) {
+    return [
+        'email' => $faker->unique()->safeEmail,
+        'name' => $faker->name,
+        'address' => $faker->address,
+        'state' => 'N',
+    ];
+});
