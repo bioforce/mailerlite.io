@@ -73,13 +73,6 @@ export default {
                     console.log(error.response.data)
                 });
         },
-        filter(type)
-        {
-            this.filterType = type
-            this.pagination.current_page = 1
-            this.fetchBanners()
-            return false
-        },
         showAddForm()
         {
             this.$refs.create.updateFields()
